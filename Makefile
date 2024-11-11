@@ -6,7 +6,7 @@
 ##
 
 ifndef VERSION
-	VERSION:=7.4
+	VERSION:=8.2
 endif
 
 DOCKER_REPO:=sabinus52/spiderman-php
@@ -67,17 +67,20 @@ push: ## Pousse l'image sur le registry "Docker Hub"
 
 .PHONY: build-all
 build-all: ## Construction des images PHP dans toutes les versions
+	VERSION=8.2 make build
 	VERSION=7.4 make build
 	VERSION=5.6 make build
 
 
 .PHONY: save-all
 save-all: ## Sauvegarde des images PHP dans toutes les versions
+	VERSION=8.2 make save
 	VERSION=7.4 make save
 	VERSION=5.6 make save
 
 
 .PHONY: push-all
 push-all: ## Pousse toutes les images sur le registry "Docker Hub"
+	VERSION=8.2 make push
 	VERSION=7.4 make push
 	VERSION=5.6 make push
