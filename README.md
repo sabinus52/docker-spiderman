@@ -5,6 +5,8 @@
 
 - **7.4** (apache and cli)
 - **5.6** (apache and cli)
+- **8.2** (apache and cli)
+- **8.3** (apache and cli)
 
 
 # Build of images : **php-apache**
